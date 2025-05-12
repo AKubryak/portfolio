@@ -6,50 +6,97 @@
     text-decoration: none;
     list-style-type: none;
 }
+
 :root {
     --color-svg-green: #76bc21;
+    --background-mint: #B2E0D4;
 }
+
+/* general */
 .container {
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
+
+.general {
+    margin-bottom: 40px;
+}
+
+.general .general__title {
+    font-size: 2em;
+    line-height: 30px;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.general .general__title::after {
+    content: "";
+    display: block;
+    background: var(--color-svg-green);
+    width: 170px;
+    height: 2px;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.general .general__text {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #000;
+    text-align: center;
+}
+
 /* header */
 .header {
     position: absolute;
     width: 100%;
     background: rgba(0, 0, 0, .6);
-    z-index: 3;
+    z-index: 5;
 }
+
 /* изменяет position у header с absolute на fixed */
 header.fixed {
     position: fixed;
     background: rgba(0, 0, 0, .9);
 }
+
 .header .container {
     padding: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .header .header__logo {
     font-size: 28px;
     line-height: 30px;
     font-weight: 600;
     color: #fff;
 }
+
 .header .header__menu {
     display: flex;
     gap: 20px;
 }
+
 .header .header__menu .header__item {
     transition: all .3s linear;
 }
+
 .header .header__menu .header__item:hover,
 .header .header__menu .header__item:active {
     transform: scale(1.14);
 }
+
 .header .header__menu .header__item .header__link {
     font-size: 16px;
     line-height: 20px;
@@ -58,12 +105,14 @@ header.fixed {
     text-align: center;
     font-style: normal;
 }
+
 .header .header__button-switcher {
     font-size: 14px;
     line-height: 20px;
     font-weight: 300;
     color: #fff;
 }
+
 .header .header__button-switcher {
     display: flex;
     align-items: center;
@@ -81,9 +130,11 @@ header.fixed {
     opacity: .9;
     transition: opacity .25s ease;
 }
+
 .header .header__button-switcher:hover {
     opacity: 1;
 }
+
 .header .header__button-switcher:before {
     content: '';
     display: block;
@@ -96,6 +147,7 @@ header.fixed {
     top: 4px;
     width: 48px;
 }
+
 .header .header__button-switcher:after {
     border-radius: 60px;
     bottom: 4px;
@@ -107,13 +159,16 @@ header.fixed {
     top: 4px;
     width: 48px;
 }
+
 .header .header__button-switcher span {
     flex: 1 1 50%;
     text-align: center;
 }
+
 .header .header__button-switcher #langSwitcher {
     display: none;
 }
+
 /* homePage */
 .homePage {
     position: relative;
@@ -124,12 +179,14 @@ header.fixed {
     display: flex;
     align-items: center;
 }
+
 .homePage .homePage__wrapper {
     padding: 40px 0;
     background: rgba(0, 0, 0, .6);
     text-align: center;
     width: 100%;
 }
+
 .homePage .homePage__title {
     margin-bottom: 10px;
     font-size: 40px;
@@ -137,104 +194,241 @@ header.fixed {
     line-height: 44px;
     color: #fff;
 }
+
 .homePage .homePage__text {
     font-size: 20px;
     font-weight: 400;
     line-height: 24px;
     color: #fff;
 }
+
 /* hero */
 .hero {
     margin-bottom: 60px;
 }
+
 .hero .container {
     display: flex;
     justify-content: space-between;
     gap: 60px;
 }
+
 .hero .hero__wrapper-image {
     max-width: 320px;
 }
+
 .hero .hero__wrapper-image img {
     max-width: 100%;
     border-radius: 5%;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s;
 }
+
 .hero .hero__wrapper-image img:hover {
     transform: scale(1.05);
 }
+
 .hero .hero__title {
     color: #262626;
     font-size: 2em;
     font-weight: 700;
 }
+
 .hero .hero__text {
     margin: 16px 0;
 }
+
 .hero .hero__list .hero__item {
     display: flex;
     align-items: center;
     gap: 5px;
     margin-bottom: 5px;
 }
+
 .hero .hero__list .hero__icon svg {
     color: var(--color-svg-green);
     width: 24px;
     height: 24px;
 }
+
 .hero .hero__list .hero__item .hero__item-title {
     font-weight: 600;
 }
+
 .hero .hero__list .hero__item:last-of-type {
     margin-bottom: 0;
 }
+
 /* achievement */
-/* skills */
-.general {
-    margin-bottom: 40px;
+.achievement {
+    background: linear-gradient(135deg, #B2E0D4, #ffe75e);
+    padding: 40px 0;
 }
-.general .general__title {
-    font-size: 2em;
-    line-height: 30px;
-    font-weight: 600;
-    color: #333;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 40px;
+
+.custom-swiper {
     position: relative;
+    width: 100%;
+    /* height: 400px; */
+    overflow: hidden;
+    border-radius: 15px;
+    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); */
 }
-.general .general__title::after {
-    content: "";
-    display: block;
-    background: var(--color-svg-green);
-    width: 170px;
-    height: 2px;
+
+.custom-swiper__wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.custom-swiper__slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;  /* ! */
+}
+
+.custom-swiper__slide img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+.custom-swiper__button {
     position: absolute;
-    bottom: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #333;
+    z-index: 2;
+}
+
+.custom-swiper__button:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.custom-swiper__button--prev {
+    left: 10px;
+}
+
+.custom-swiper__button--next {
+    right: 10px;
+}
+
+.custom-swiper__pagination {
+    position: absolute;
+    bottom: 5px;
     left: 50%;
-    transform: translate(-50%);
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+    z-index: 2;
 }
-.general .general__text {
-    font-size: 18px;
-    line-height: 21px;
-    font-weight: 400;
-    color: #000;
-    text-align: center;
+
+.custom-swiper__pagination span {
+    width: 10px;
+    height: 10px;
+    background-color: #B2E0D4;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
+.custom-swiper__pagination span.active {
+    background-color: #ffe75e;
+}
+/* Стили для модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #76bc21;
+}
+
+/* Стили для слайдера */
+.custom-swiper__slide img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: contain;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.custom-swiper__slide img:hover {
+    transform: scale(1.02);
+}
+
+/* Стиль для активного слайда */
+.custom-swiper__slide.active {
+    display: flex;
+}
+
+/* Фон для секции достижений */
+.achievement {
+    background: linear-gradient(135deg, #B2E0D4, #ffe75e);
+    padding: 40px 0;
+}
+/* skills */
+.skills {
+    padding: 40px 0;
+}
+
 /* work */
+.work {
+    padding: 40px 0;
+}
+
 /* hobbies */
 .hobbies {
     padding: 40px 20px;
 }
+
 .hobbies .hobbies__wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
 .hobbies .hobbies__wrapper .hobbies__wrapper-item {
     display: flex;
-    align-items: center; 
+    align-items: center;
     flex-direction: column;
     padding: 15px;
     width: 30%;
@@ -243,9 +437,11 @@ header.fixed {
     box-shadow: 0px 0px 20px 3px rgba(29, 101, 32, 0.2);
     transition: 0.5s ease;
 }
+
 .hobbies .hobbies__wrapper .hobbies__wrapper-item:hover {
     box-shadow: 0px 0px 20px 3px rgba(29, 101, 32, 0.5);
 }
+
 .hobbies .hobbies__wrapper .hobbies__wrapper-item .hobbies__image {
     width: 100%;
     height: auto;
@@ -255,12 +451,14 @@ header.fixed {
     object-position: center;
     margin-bottom: 10px;
 }
+
 .hobbies .hobbies__wrapper .hobbies__wrapper-item .hobbies__title {
     font-size: 16px;
     font-weight: 500;
     color: #333;
     margin-bottom: 5px;
 }
+
 .hobbies .hobbies__wrapper .hobbies__wrapper-item .hobbies__text {
     font-size: 14px;
     line-height: 24px;
@@ -269,4 +467,5 @@ header.fixed {
     color: #0e100e;
     text-align: justify;
 }
+
 /* books */
