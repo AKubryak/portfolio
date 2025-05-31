@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кубряк Алексей Михайлович</title>
+    <link rel="icon" href="icons/portfolio_ico_3.png">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Кубряк Алексей Михайлович</title>
 </head>
 
 <body>
@@ -20,7 +21,7 @@
                     <li class="header__item"><a href="#skills" class="header__link">Навыки</a></li>
                     <li class="header__item"><a href="#work" class="header__link">Работа</a></li>
                     <li class="header__item"><a href="#hobbies" class="header__link">Интересы</a></li>
-                    <li class="header__item"><a href="#books" class="header__link">Книги</a></li>
+                    <li class="header__item"><a href="#portfolio" class="header__link">Портфолио</a></li>
                     <li class="header__item"><a href="#contact" class="header__link">Связаться</a></li>
                 </ul>
                 <div class="header__hamburger">
@@ -53,13 +54,19 @@
                 <h2 class="hero__title">Кубряк Алексей Михайлович</h2>
                 <p class="hero__text">Все мы немножко fullstack...</p>
                 <p class="hero__text">Я web-разработчик уровня junior. Начинал свой путь с написания
-                    небольших сайтов, попробовал несколько языков программирования и остановил свой выбор на web.</p>
-                <p class="hero__text">Сейчас работаю в компании "Минский завод гражданской авиации №407". Тут я полюбил
-                    программирование, познакомился с Python, HTML, CSS, JS.</p>
-                <p class="hero__text">Свободное время посвящаю саморазвитию, например, стараюсь активно
-                    изучать framework React, и своим хобби, и побольше времени проводить с семьей.
+                    небольших сайтов, попробовал несколько языков программирования и в конечном итоге выбрав
+                    веб-разработку как свое призвание.</p>
+                <p class="hero__text">Во время отработки на Минском заводе гражданской авиации № 407 я
+                    всерьёз увлёкся программированием. Именно там я освоил основы Python, HTML, CSS и JavaScript, что
+                    определило мой дальнейший путь.</p>
+                <p class="hero__text">В свободное время я активно занимаюсь саморазвитием, например, стараюсь активно
+                    изучать framework React. Также я стараюсь больше времени проводить с семьей и заниматься своим
+                    хобби, что приносит мне радость и вдохновение.
                 </p>
-                <p class="hero__text">Не так давно пробовал себя ...</p>
+                <p class="hero__text">Недавно я начал изучать бэкенд-разработку на PHP и SQL. Освоил основы языка,
+                    научился обрабатывать формы и создавать запросы к базам данных. Понял важность безопасности,
+                    защищая приложения от SQL-инъекций. Создал несколько простых проектов, что сильно увеличило мои
+                    знания и увлекло меня этой темой!</p>
                 <ul class="hero__list">
                     <li class="hero__item">
                         <span class="hero__icon">
@@ -106,12 +113,6 @@
                                     d="M11.25 4.533A9.707 9.707 0 0 0 6 3a9.735 9.735 0 0 0-3.25.555.75.75 0 0 0-.5.707v14.25a.75.75 0 0 0 1 .707A8.237 8.237 0 0 1 6 18.75c1.995 0 3.823.707 5.25 1.886V4.533ZM12.75 20.636A8.214 8.214 0 0 1 18 18.75c.966 0 1.89.166 2.75.47a.75.75 0 0 0 1-.708V4.262a.75.75 0 0 0-.5-.707A9.735 9.735 0 0 0 18 3a9.707 9.707 0 0 0-5.25 1.533v16.103Z" />
                             </svg>
                         </span>
-<!--                         <p class="hero__item-title">Курсы:</p>
-                        <ul>
-                            <li>WEB-разработчик (TeachMeSkills)</li>
-                            <li>WEB-разработчик (Udemy)</li>
-                            <li>Полный курс по JavaScript + React - с нуля до результата (Udemy)</li>
-                        </ul> -->
                         <p class="hero__item-title">Языки:</p>
                         <ul>
                             <li>JavaScript</li>
@@ -125,14 +126,31 @@
     </section>
     <section class="achievement" id="achievement">
         <div class="container">
-            <h2 class="general__title">Достижения</h2>
-            <ul class="achievement__list">
-                <li class="achievement__item"></li>
-                <li class="achievement__item"></li>
-                <li class="achievement__item"></li>
-                <li class="achievement__item"></li>
-                <li class="achievement__item"></li>
-            </ul>
+            <div class="general">
+                <h2 class="general__title">Достижения</h2>
+                <p class="general__text"></p>
+            </div>
+            <div class="custom-swiper">
+                <div class="custom-swiper__wrapper">
+                    <div class="custom-swiper__slide">
+                        <img src="img/achievement_php.jpg" alt="Achievement 1" class="enlargeable">
+                    </div>
+                    <div class="custom-swiper__slide">
+                        <img src="img/achievement_php.jpg" alt="Achievement 2" class="enlargeable">
+                    </div>
+                    <div class="custom-swiper__slide">
+                        <img src="img/achievement_php.jpg" alt="Achievement 3" class="enlargeable">
+                    </div>
+                </div>
+                <button class="custom-swiper__button custom-swiper__button--prev">&#10094;</button>
+                <button class="custom-swiper__button custom-swiper__button--next">&#10095;</button>
+                <div class="custom-swiper__pagination"></div>
+            </div>
+
+            <div id="imageModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modalImage">
+            </div>
         </div>
     </section>
     <section class="skills" id="skills">
@@ -142,37 +160,33 @@
                 <p class="general__text">Все оценки являются субъективными и показывают уровень, который, как по мне,
                     необходим для работы.</p>
             </div>
-            <ul class="skills__list">
-                <li class="skills__item">Все</li>
-                <li class="skills__item">HTML/CSS</li>
-                <li class="skills__item">PHP</li>
-                <li class="skills__item">JS</li>
-                <li class="skills__item">Database</li>
-                <li class="skills__item">Other</li>
-            </ul>
-            <div class="skills__wrapper">
-                <div class="skills__wrapper-element">
-                    <ul class="skills__list-element">
-                        <li class="skills__item-element">HTML</li>
-                        <li class="skills__item-element">CSS, SCSS, SASS, LESS</li>
-                        <li class="skills__item-element">Bootstrap</li>
-                        <li class="skills__item-element">Figma</li>
-                    </ul>
+            <div class="skills__content">
+                <div class="skills__tabs">
+                    <button class="skills__tab active" data-category="all">Все</button>
+                    <button class="skills__tab" data-category="htmlcss">HTML/CSS</button>
+                    <button class="skills__tab" data-category="php">PHP</button>
+                    <button class="skills__tab" data-category="js">JS</button>
+                    <button class="skills__tab" data-category="database">Database</button>
+                    <button class="skills__tab" data-category="other">Other</button>
                 </div>
-                <div class="skills__wrapper-desc">
-                    <div class="skills__title-desc">
-                        <img src="#" alt="icon" class="skills__image">
-                        <p class="skills__name">HTML</p>
+                <div class="skills__main">
+                    <div class="skills__icon">
+                        <img src="icons/skills/all.png" alt="Skills icon" id="skillsIcon">
                     </div>
-                    <div class="skills__progress-desc">
-                        <div class="skills__progress-percent">85%</div>
-                        <div class="skills__progress-bar"></div>
+                    <div class="skills__info">
+                        <h3 class="skills__category" id="skillsCategory">Мой стек</h3>
+                        <div class="skills__progress">
+                            <div class="skills__progress-text" id="skillsProgress">100%</div>
+                            <div class="skills__progress-bar">
+                                <div class="skills__progress-fill" id="skillsProgressFill" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <p class="skills__description" id="skillsDescription">Полный список всех моих навыков и
+                            технологий, которые я использую в работе.</p>
                     </div>
-                    <div class="skills__text-desc">
-                        Отлично ориентируюсь в вёрстке, способен быстро и качественно
-                        составить скелет сайта, очень стараюсь содержать код в чистоте и уюте, разделять все по
-                        компонентам.
-                    </div>
+                </div>
+                <div class="skills__items" id="skillsItems">
+                    <!-- Сюда будут добавляться элементы навыков -->
                 </div>
             </div>
         </div>
@@ -243,19 +257,23 @@
             <div class="hobbies__wrapper-item">
                 <img src="img/rubiks-cube.jpg" alt="hobbies image" class="hobbies__image">
                 <p class="hobbies__title">Головоломки</p>
-                <p class="hobbies__text">Головоломки нравятся  за их способность развивать мышление, логику и
+                <p class="hobbies__text">Головоломки нравятся за их способность развивать мышление, логику и
                     креативность! Это увлекательный способ провести время, помогают тренировать
                     мозг. Решать головоломки всегда интересно, так как они предлагают новую задачу и вызывают чувство
-                    удовлетворения при нахождении решения. Мне очень нравится собирать кубик-рубика. Моё рекордное время -
+                    удовлетворения при нахождении решения. Мне очень нравится собирать кубик-рубика. Моё рекордное время
+                    -
                     17 секунд, но обычно собираю за 20 - 25 секунд.</p>
             </div>
             <div class="hobbies__wrapper-item">
                 <img src="img/pool.jpg" alt="hobbies image" class="hobbies__image">
                 <p class="hobbies__title">Плавание</p>
-                <p class="hobbies__text">С самого детства мы каждое лето ездили на озеро. Меня очень увлекали эти поездки и
-                    всегда с нетерпением ждал наступления теплой поры года. Сначала меня пробовал учить дедушка держаться на
+                <p class="hobbies__text">С самого детства мы каждое лето ездили на озеро. Меня очень увлекали эти
+                    поездки и
+                    всегда с нетерпением ждал наступления теплой поры года. Сначала меня пробовал учить дедушка
+                    держаться на
                     воде, но всё было тщетно (преобладал страх воды). Но через какое-то время я, став чуточку взрослее,
-                    начал сам пытаться ложиться на воду и плыть. Мама увидела мои порывы и записала в спортивную школу по
+                    начал сам пытаться ложиться на воду и плыть. Мама увидела мои порывы и записала в спортивную школу
+                    по
                     плаванию. Думаю, так и началась большая любовь к воде и плаванию. Вода помогает мне очистить голову,
                     расслабиться, побывать в совершенно другой обстановке.</p>
             </div>
@@ -269,8 +287,10 @@
                 <img src="img/football.jpg" alt="hobbies image" class="hobbies__image">
                 <p class="hobbies__title">Футбол</p>
                 <p class="hobbies__text">Футбол полюбил совершенно случайно. У меня никогда не было тяги к футболу и не
-                    понимал своих друзей, которые постоянно обсуждали клубы, футболистов, коллекционировали их карточки. Но
-                    однажды скучным вечером я всё-таки решил посмотреть футбол. Меня очень заинтересовала Барселона. В те
+                    понимал своих друзей, которые постоянно обсуждали клубы, футболистов, коллекционировали их карточки.
+                    Но
+                    однажды скучным вечером я всё-таки решил посмотреть футбол. Меня очень заинтересовала Барселона. В
+                    те
                     годы показывала невероятный футбол и благодаря ей я полюбил футбол. Сейчас я могу назвать себя
                     болельщиком с большим стажем: всегда болел за один клуб, смотрю много матчей, слежу за статистикой
                     многих клубов и игроков. Сейчас есть юольшая мечта увидеть это всё вживую.</p>
@@ -278,10 +298,13 @@
             <div class="hobbies__wrapper-item">
                 <img src="img/books.jpg" alt="hobbies image" class="hobbies__image">
                 <p class="hobbies__title">Книги</p>
-                <p class="hobbies__text">В школьные годы я очень не любил литературу, наверно, так бы продолжалось и сейчас,
+                <p class="hobbies__text">В школьные годы я очень не любил литературу, наверно, так бы продолжалось и
+                    сейчас,
                     но учась в университете мы с моим другом поехали на ночную книжную ярмарку. Там он мне посоветовал
-                    несколько книг, думаю, меня привлекло то, как он рассказывал о книгах. Я полюбил книги, преимущественно
-                    зарубежную литературу. Моя любимая книга - научно-фантастический роман "11/22/63" американского писателя
+                    несколько книг, думаю, меня привлекло то, как он рассказывал о книгах. Я полюбил книги,
+                    преимущественно
+                    зарубежную литературу. Моя любимая книга - научно-фантастический роман "11/22/63" американского
+                    писателя
                     Стивена Кинга.</p>
             </div>
             <div class="hobbies__wrapper-item">
@@ -292,34 +315,26 @@
             </div>
         </div>
     </section>
-    <section class="books">
+    <section class="portfolio">
         <div class="container">
             <div class="general">
-                <h2 class="general__title">Прочитанные книги</h2>
-                <p class="general__text">Тут указаны не все прочитанные мной книги, а только те книги, которые произвели
-                    на меня наибольшее впечатление</p>
+                <h2 class="general__title">Портфолио</h2>
+                <p class="general__text">Тут указаны мои pet-проекты</p>
             </div>
-            <ul class="books__list">
-                <li class="books__item"></li>
-                <li class="books__item"></li>
-                <li class="books__item"></li>
-                <li class="books__item"></li>
-                <li class="books__item"></li>
+            <ul class="portfolio__list">
+                <li class="portfolio__item"></li>
+                <li class="portfolio__item"></li>
+                <li class="portfolio__item"></li>
+                <li class="portfolio__item"></li>
+                <li class="portfolio__item"></li>
             </ul>
         </div>
     </section>
-
-
     <section class="education" id="education">
+        <!-- Не реализован -->
         <div class="container">
             <h2 class="general__title"></h2>
         </div>
-    </section>
-    <section class="portfolio" id="portfolio">
-        <div class="container"></div>
-    </section>
-    <section class="testimonials" id="testimonials">
-        <div class="container"></div>
     </section>
     <section class="contact" id="contact">
         <div class="container">
@@ -339,15 +354,14 @@
             <button class="button button__text-center" form="contactsForm">Send Message</button>
         </div>
     </section>
-    <section class="blog" id="blog">
-        <div class="container"></div>
-    </section>
+
     <footer class="footer">
         <div class="container">
-            &copy;&nbsp;Кубряк Алексей 1999&nbsp;-&nbsp;2024
+            &copy;&nbsp;Кубряк Алексей 1999&nbsp;-&nbsp;2025
         </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script defer type="module" src="js/main.js"></script>
 </body>
 
 </html>
