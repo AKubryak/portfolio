@@ -12,7 +12,7 @@ export function initSkills() {
             title: "Мой стек",
             percent: null,
             description: "Полный список всех моих навыков и технологий, которые я использую в работе.",
-            image: "icons/portfoli_ico.png",
+            image: "img/web.jpg",
             items: [
                 "HTML5 (Bootstrap)",
                 "CSS3 (SCSS/SASS/LESS)",
@@ -30,7 +30,7 @@ export function initSkills() {
         },
         'htmlcss': {
             title: "HTML/CSS",
-            percent: "85%",
+            percent: "80%",
             description: "Отлично ориентируюсь в вёрстке, способен быстро и качественно составить скелет сайта, очень стараюсь содержать код в чистоте и уюте, разделять все по компонентам.",
             image: "icons/portfoli_ico.png",
             items: [
@@ -45,9 +45,9 @@ export function initSkills() {
         },
         'php': {
             title: "PHP",
-            percent: "75%",
+            percent: "50%",
             description: "Имею опыт работы с PHP, включая работу с фреймворком Laravel. Умею создавать RESTful API, работать с базами данных и реализовывать безопасность приложений.",
-            image: "icons/portfoli_ico.png",
+            image: "#",
             items: [
                 "PHP 8+",
                 "Laravel 10+",
@@ -59,7 +59,7 @@ export function initSkills() {
         },
         'js': {
             title: "JavaScript",
-            percent: "70%",
+            percent: "60%",
             description: "Знаю основы JavaScript, работал с Vue.js. Понимаю асинхронное программирование, работаю с DOM и событиями.",
             image: "icons/portfoli_ico.pngg",
             items: [
@@ -72,7 +72,7 @@ export function initSkills() {
         },
         'database': {
             title: "Базы данных",
-            percent: "65%",
+            percent: "60%",
             description: "Имею опыт работы с реляционными базами данных, умею создавать и оптимизировать запросы, проектировать структуру БД.",
             image: "icons/portfoli_ico.png",
             items: [
@@ -85,7 +85,7 @@ export function initSkills() {
         },
         'other': {
             title: "Другие навыки",
-            percent: "80%",
+            percent: "70%",
             description: "Дополнительные инструменты и технологии, которые я использую в работе.",
             image: "icons/portfoli_ico.png",
             items: [
